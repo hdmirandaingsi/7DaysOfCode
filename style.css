@@ -89,8 +89,8 @@ body, html ,h1,label,input,botton{
 
     .Introducetusdatos button {
         padding: 10px 20px;
-        background-color: var(--link-background); /* Usando la variable para el fondo del bot髇 */
-        color: var(--light-text); /* Usando la variable para el color del texto del bot髇 */
+        background-color: var(--link-background); /* Usando la variable para el fondo del bot贸n */
+        color: var(--light-text); /* Usando la variable para el color del texto del bot贸n */
         border: none;
         border-radius: 4px;
         cursor: pointer;
@@ -98,20 +98,20 @@ body, html ,h1,label,input,botton{
     }
 
         .Introducetusdatos button:hover {
-            background-color: var(--link-hover-background); /* Usando la variable para el hover del bot髇 */
+            background-color: var(--link-hover-background); /* Usando la variable para el hover del bot贸n */
         }
 
 #ventana-mensaje {
     display: none;
-    background-color: #378090; /* Color azul del bot髇 (puedes cambiarlo por una variable si lo deseas) */
+    background-color: #378090; /* Color azul del bot贸n (puedes cambiarlo por una variable si lo deseas) */
     color: white; /* Color del texto blanco */
     border: none; /* Sin borde */
-    padding: 20px 40px; /* Padding similar al de un bot髇 */
+    padding: 20px 40px; /* Padding similar al de un bot贸n */
     text-align: center;
     text-decoration: none; /* Sin subrayado */
-    display: inline-block; /* Para que se comporte como un bot髇 */
-    font-size: 16px; /* Tama駉 de fuente similar al de un bot髇 */
-    margin: 4px 2px; /* Margen peque駉 */
+    display: inline-block; /* Para que se comporte como un bot贸n */
+    font-size: 16px; /* Tama帽o de fuente similar al de un bot贸n */
+    margin: 4px 2px; /* Margen peque帽o */
     cursor: pointer; /* Cursor de puntero al pasar el mouse */
     border-radius: 9px; /* Bordes redondeados */
 }
@@ -119,7 +119,7 @@ body, html ,h1,label,input,botton{
 
 
 
-/* Media query para pantallas peque馻s (menos de 768px) */
+/* Media query para pantallas peque帽as (menos de 768px) */
 @media (max-width: 400px) {
     .Introducetusdatos {
         padding: 10px; /* Reduce el padding */
@@ -153,16 +153,7 @@ button {
 }
 
 /* FIN dia 3 */
-
-
-
-
-/* dia 4 */
-
-
-/* FIN dia 4 */
-
-
+ 
 /* dia 5 */
 #lista {
     display: flex;
