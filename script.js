@@ -9,7 +9,7 @@ document.querySelectorAll('.day-link').forEach(link => {
 
 
 /* DIA 1 */ 
-// Primer ejercicio: Comparaciones con == (erróneo)
+// Primer ejercicio: Comparaciones con == (errÃ³neo)
 console.log(false == '0'); // true
 console.log(null == undefined); // true
 console.log(" \t\r\n" == 0); // true
@@ -49,7 +49,7 @@ function mostrarMensaje() {
     let edad = document.getElementById("edad").value;
     let lenguaje = document.getElementById("lenguaje").value;
 
-    let mensaje = `Hola ${nombre}, tienes ${edad} años y te gusta programar en ${lenguaje}.`;
+    let mensaje = `Hola ${nombre}, tienes ${edad} aÃ±os y te gusta programar en ${lenguaje}.`;
 
     let ventanaMensaje = document.getElementById("ventana-mensaje");
     ventanaMensaje.textContent = mensaje;
@@ -70,13 +70,13 @@ function mostrarMensaje() {
 function selectLevel1(choice) {
     document.getElementById('level2').style.display = 'block';
 
-    // Cambiar color del botón seleccionado en el nivel 1
+    // Cambiar color del botÃ³n seleccionado en el nivel 1
     if (choice === 'frontend') {
         document.getElementById('frontend').style.backgroundColor = 'darkblue';
-        document.getElementById('backend').style.backgroundColor = ''; // Restaurar color del otro botón
+        document.getElementById('backend').style.backgroundColor = ''; // Restaurar color del otro botÃ³n
     } else if (choice === 'backend') {
         document.getElementById('backend').style.backgroundColor = 'darkred';
-        document.getElementById('frontend').style.backgroundColor = ''; // Restaurar color del otro botón
+        document.getElementById('frontend').style.backgroundColor = ''; // Restaurar color del otro botÃ³n
     }
 
     // Cambiar color de los botones del nivel 2
@@ -100,29 +100,29 @@ function selectLevel2(optionId) {
     let message = '';
     switch (selectedTechnology) {
         case 'React':
-            message = 'React es una librería JavaScript muy popular para construir interfaces de usuario. ¡Buena elección!';
+            message = 'React es una librerÃ­a JavaScript muy popular para construir interfaces de usuario. Â¡Buena elecciÃ³n!';
             break;
         case 'Vue':
-            message = 'Vue.js es un framework progresivo para construir interfaces de usuario. ¡Excelente!';
+            message = 'Vue.js es un framework progresivo para construir interfaces de usuario. Â¡Excelente!';
             break;
         case 'C#':
-            message = 'C# es un lenguaje de programación orientado a objetos desarrollado por Microsoft. ¡Buena elección!';
+            message = 'C# es un lenguaje de programaciÃ³n orientado a objetos desarrollado por Microsoft. Â¡Buena elecciÃ³n!';
             break;
         case 'Java':
-            message = 'Java es un lenguaje de programación de propósito general, concurrente, orientado a objetos. ¡Excelente!';
+            message = 'Java es un lenguaje de programaciÃ³n de propÃ³sito general, concurrente, orientado a objetos. Â¡Excelente!';
             break;
     }
 
     document.getElementById('message').innerText = message;
 
-    // Preguntar por especialización o Fullstack
-    let specializationChoice = prompt("¿Deseas especializarte en " + selectedTechnology + " o convertirte en Fullstack? (Responde 'especializar' o 'fullstack')");
+    // Preguntar por especializaciÃ³n o Fullstack
+    let specializationChoice = prompt("Â¿Deseas especializarte en " + selectedTechnology + " o convertirte en Fullstack? (Responde 'especializar' o 'fullstack')");
     if (specializationChoice.toLowerCase() === 'especializar') {
-        message += " ¡Es genial especializarse en " + selectedTechnology + "!";
+        message += " Â¡Es genial especializarse en " + selectedTechnology + "!";
     } else if (specializationChoice.toLowerCase() === 'fullstack') {
-        message += " ¡Convertirse en Fullstack es un gran objetivo!";
+        message += " Â¡Convertirse en Fullstack es un gran objetivo!";
     } else {
-        message += " ¡Sigue explorando tus opciones!";
+        message += " Â¡Sigue explorando tus opciones!";
     }
 
     document.getElementById('message').innerText = message;
@@ -133,9 +133,9 @@ function selectLevel2(optionId) {
 function askForTechnologies() {
     let moreTechnologies = true;
     while (moreTechnologies) {
-        let technology = prompt("¿Hay alguna otra tecnología que te gustaría aprender? (Responde 'ok' para continuar o cualquier otra cosa para terminar)");
+        let technology = prompt("Â¿Hay alguna otra tecnologÃ­a que te gustarÃ­a aprender? (Responde 'ok' para continuar o cualquier otra cosa para terminar)");
         if (technology.toLowerCase() === 'ok') {
-            let techName = prompt("Ingresa el nombre de la tecnología:");
+            let techName = prompt("Ingresa el nombre de la tecnologÃ­a:");
             let comment = getCommentForTechnology(techName);
             alert(comment);
         } else {
@@ -147,13 +147,13 @@ function askForTechnologies() {
 function getCommentForTechnology(techName) {
     switch (techName.toLowerCase()) {
         case 'nodejs':
-            return 'Node.js es un entorno de ejecución de JavaScript de lado del servidor muy popular.';
+            return 'Node.js es un entorno de ejecuciÃ³n de JavaScript de lado del servidor muy popular.';
         case 'python':
-            return 'Python es un lenguaje de programación versátil utilizado en muchos campos, incluyendo la ciencia de datos y el desarrollo web.';
+            return 'Python es un lenguaje de programaciÃ³n versÃ¡til utilizado en muchos campos, incluyendo la ciencia de datos y el desarrollo web.';
         case 'sql':
-            return 'SQL es un lenguaje de consulta estándar para bases de datos relacionales.';
+            return 'SQL es un lenguaje de consulta estÃ¡ndar para bases de datos relacionales.';
         default:
-            return `¡${techName} es una tecnología interesante! ¡Sigue aprendiendo!`;
+            return `Â¡${techName} es una tecnologÃ­a interesante! Â¡Sigue aprendiendo!`;
     }
 }
 /* FIN dia 3 */
@@ -161,22 +161,22 @@ function getCommentForTechnology(techName) {
 
 
 /* dia 4 */
-// Generar el número aleatorio al cargar la página
+// Generar el nÃºmero aleatorio al cargar la pÃ¡gina
 const numeroAdivinacion = Math.floor(Math.random() * (10 - 0 + 1) + 0);
-const numeroFijo = 7; // Número fijo para comparar
+const numeroFijo = 7; // NÃºmero fijo para comparar
 
-// Mostrar el número aleatorio y el número fijo en la consola
-console.log("Número aleatorio a adivinar:", numeroAdivinacion);
-console.log("Número fijo:", numeroFijo);
+// Mostrar el nÃºmero aleatorio y el nÃºmero fijo en la consola
+console.log("NÃºmero aleatorio a adivinar:", numeroAdivinacion);
+console.log("NÃºmero fijo:", numeroFijo);
 
 function adivinar() {
     const numeroInput = document.getElementById("numeroInput").value;
     const mensaje = document.getElementById("mensaje");
 
     if (numeroInput == numeroAdivinacion) {
-        mensaje.textContent = "¡Felicidades, acertaste! El número era " + numeroAdivinacion + ".";
+        mensaje.textContent = "Â¡Felicidades, acertaste! El nÃºmero era " + numeroAdivinacion + ".";
     } else {
-        mensaje.textContent = "¡Incorrecto! El número era " + numeroAdivinacion + ".";
+        mensaje.textContent = "Â¡Incorrecto! El nÃºmero era " + numeroAdivinacion + ".";
     }
 }
 /* FIN dia 4 */
@@ -190,126 +190,134 @@ let dulces = [];
 let congelados = [];
 let comida = "";
 let categoria = "";
-let precio = 0; // Variable para el precio
+let precio = 0;
 let eliminar = "";
 
-let agregarMas = "sí";
-while (agregarMas != "no") {
-    if (
-        frutas.length === 0 &&
-        lacteos.length === 0 &&
-        dulces.length === 0 &&
-        congelados.length === 0
-    ) {
-        agregarMas = prompt(
-            "¿Deseas agregar una comida a la lista de compras? Responde 'si' o 'no'."
-        );
-    } else {
-        agregarMas = prompt(
-            "¿Deseas agregar una comida a la lista de compras? Responde 'si', 'no' o 'eliminar'."
-        );
-    }
-
-    while (
-        agregarMas != "si" &&
-        agregarMas != "no" &&
-        agregarMas != "eliminar"
-    ) {
-        alert(`¡Operación no reconocida!`);
-        agregarMas = prompt(
-            "¿Deseas agregar una comida a la lista de compras? Responde 'si' o 'no'."
-        );
-    }
-
-    if (agregarMas === "no") {
-        break;
-    }
-
-    if (agregarMas === "si") {
-        comida = prompt("¿Qué comida deseas agregar?");
-        precio = parseFloat(prompt("¿Cuál es el precio de este artículo?")); // Pedir precio
-        categoria = prompt(
-            "¿En qué categoría encaja esta comida: 'frutas', 'lacteos', 'dulces' o 'congelados'?"
-        );
-        if (categoria === "frutas") {
-            frutas.push({ nombre: comida, precio: precio });
-        } else if (categoria === "lacteos") {
-            lacteos.push({ nombre: comida, precio: precio });
-        } else if (categoria === "dulces") {
-            dulces.push({ nombre: comida, precio: precio });
-        } else if (categoria === "congelados") {
-            congelados.push({ nombre: comida, precio: precio });
-        } else {
-            alert("Esa categoria no está predefinida.");
-        }
-    } else if (agregarMas === "eliminar") {
+function iniciarPrograma() {
+    let agregarMas = "sÃ­";
+    while (agregarMas != "no") {
         if (
             frutas.length === 0 &&
             lacteos.length === 0 &&
             dulces.length === 0 &&
             congelados.length === 0
         ) {
-            alert(`¡La lista está vacía!`);
-        } else {
-            eliminar = prompt(
-                `Lista de compras:\n  Frutas: ${frutas.map(
-                    (item) => item.nombre
-                )}\n  Lácteos: ${lacteos.map(
-                    (item) => item.nombre
-                )}\n  Dulces: ${dulces.map(
-                    (item) => item.nombre
-                )}\n  Congelados: ${congelados.map(
-                    (item) => item.nombre
-                )}\n\n¿Qué producto deseas eliminar?`
+            agregarMas = prompt(
+                "Â¿Deseas agregar una comida a la lista de compras? Responde 'si' o 'no'."
             );
-            let encontrado = false;
-            for (let i = 0; i < frutas.length; i++) {
-                if (frutas[i].nombre === eliminar) {
-                    frutas.splice(i, 1);
-                    encontrado = true;
-                    break;
-                }
-            }
-            if (!encontrado) {
-                for (let i = 0; i < lacteos.length; i++) {
-                    if (lacteos[i].nombre === eliminar) {
-                        lacteos.splice(i, 1);
-                        encontrado = true;
-                        break;
-                    }
-                }
-            }
-            if (!encontrado) {
-                for (let i = 0; i < dulces.length; i++) {
-                    if (dulces[i].nombre === eliminar) {
-                        dulces.splice(i, 1);
-                        encontrado = true;
-                        break;
-                    }
-                }
-            }
-            if (!encontrado) {
-                for (let i = 0; i < congelados.length; i++) {
-                    if (congelados[i].nombre === eliminar) {
-                        congelados.splice(i, 1);
-                        encontrado = true;
-                        break;
-                    }
-                }
-            }
-            if (encontrado) {
-                alert(`¡El ítem ${eliminar} ha sido eliminado con éxito!`);
+        } else {
+            agregarMas = prompt(
+                "Â¿Deseas agregar una comida a la lista de compras? Responde 'si', 'no' o 'eliminar'."
+            );
+        }
+
+        while (
+            agregarMas != "si" &&
+            agregarMas != "no" &&
+            agregarMas != "eliminar"
+        ) {
+            alert(`Â¡OperaciÃ³n no reconocida!`);
+            agregarMas = prompt(
+                "Â¿Deseas agregar una comida a la lista de compras? Responde 'si' o 'no'."
+            );
+        }
+
+        if (agregarMas === "no") {
+            break;
+        }
+
+        if (agregarMas === "si") {
+            comida = prompt("Â¿QuÃ© comida deseas agregar?");
+            precio = parseFloat(prompt("Â¿CuÃ¡l es el precio de este artÃ­culo?"));
+            categoria = prompt(
+                "Â¿En quÃ© categorÃ­a encaja esta comida: 'frutas', 'lacteos', 'dulces' o 'congelados'?"
+            );
+            if (categoria === "frutas") {
+                frutas.push({ nombre: comida, precio: precio });
+            } else if (categoria === "lacteos") {
+                lacteos.push({ nombre: comida, precio: precio });
+            } else if (categoria === "dulces") {
+                dulces.push({ nombre: comida, precio: precio });
+            } else if (categoria === "congelados") {
+                congelados.push({ nombre: comida, precio: precio });
             } else {
-                alert(`¡No fue posible encontrar el ítem dentro de la lista!`);
+                alert("Esa categoria no estÃ¡ predefinida.");
+            }
+        } else if (agregarMas === "eliminar") {
+            if (
+                frutas.length === 0 &&
+                lacteos.length === 0 &&
+                dulces.length === 0 &&
+                congelados.length === 0
+            ) {
+                alert(`Â¡La lista estÃ¡ vacÃ­a!`);
+            } else {
+                eliminar = prompt(
+                    `Lista de compras:\n  Frutas: ${frutas.map(
+                        (item) => item.nombre
+                    )}\n  LÃ¡cteos: ${lacteos.map(
+                        (item) => item.nombre
+                    )}\n  Dulces: ${dulces.map(
+                        (item) => item.nombre
+                    )}\n  Congelados: ${congelados.map(
+                        (item) => item.nombre
+                    )}\n\nÂ¿QuÃ© producto deseas eliminar?`
+                );
+                let encontrado = false;
+                for (let i = 0; i < frutas.length; i++) {
+                    if (frutas[i].nombre === eliminar) {
+                        frutas.splice(i, 1);
+                        encontrado = true;
+                        break;
+                    }
+                }
+                if (!encontrado) {
+                    for (let i = 0; i < lacteos.length; i++) {
+                        if (lacteos[i].nombre === eliminar) {
+                            lacteos.splice(i, 1);
+                            encontrado = true;
+                            break;
+                        }
+                    }
+                }
+                if (!encontrado) {
+                    for (let i = 0; i < dulces.length; i++) {
+                        if (dulces[i].nombre === eliminar) {
+                            dulces.splice(i, 1);
+                            encontrado = true;
+                            break;
+                        }
+                    }
+                }
+                if (!encontrado) {
+                    for (let i = 0; i < congelados.length; i++) {
+                        if (congelados[i].nombre === eliminar) {
+                            congelados.splice(i, 1);
+                            encontrado = true;
+                            break;
+                        }
+                    }
+                }
+                if (encontrado) {
+                    alert(`Â¡El Ã­tem ${eliminar} ha sido eliminado con Ã©xito!`);
+                } else {
+                    alert(`Â¡No fue posible encontrar el Ã­tem dentro de la lista!`);
+                }
             }
         }
+
+        actualizarListaHTML();
     }
 
-    // Actualizar la lista en el HTML
-    actualizarListaHTML();
+    alert(
+        `Lista de compras:\n  Frutas: ${frutas.map(
+            (item) => item.nombre
+        )}\n  LÃ¡cteos: ${lacteos.map((item) => item.nombre)}\n  Dulces: ${dulces.map(
+            (item) => item.nombre
+        )}\n  Congelados: ${congelados.map((item) => item.nombre)}`
+    );
 }
 
-// Función para actualizar la lista en el HTML
 function actualizarListaHTML() {
     document.getElementById("frutas").innerHTML = "";
     document.getElementById("lacteos").innerHTML = "";
@@ -340,7 +348,6 @@ function actualizarListaHTML() {
         document.getElementById("congelados").appendChild(li);
     });
 
-    // Calcular el total
     let total = 0;
     frutas.forEach((item) => {
         total += item.precio;
@@ -355,26 +362,13 @@ function actualizarListaHTML() {
         total += item.precio;
     });
 
-    // Mostrar el total
     document.getElementById("total").textContent = total.toFixed(2);
-}
 
-alert(
-    `Lista de compras:\n  Frutas: ${frutas.map(
-        (item) => item.nombre
-    )}\n  Lácteos: ${lacteos.map((item) => item.nombre)}\n  Dulces: ${dulces.map(
-        (item) => item.nombre
-    )}\n  Congelados: ${congelados.map((item) => item.nombre)}`
-);
-
-
-function actualizarListaHTML() {
- 
-    // Actualizar cantidad de items por categoría
     document.getElementById("cantidadFrutas").textContent = frutas.length;
     document.getElementById("cantidadLacteos").textContent = lacteos.length;
     document.getElementById("cantidadDulces").textContent = dulces.length;
-    document.getElementById("cantidadCongelados").textContent = congelados.length;
+    document.getElementById("cantidadCongelados").textContent =
+        congelados.length;
 }
 /* FIN dia 5 */
 
@@ -390,26 +384,26 @@ function iniciarPrograma() {
     let categoria = "";
     let eliminar = "";
 
-    let agregarMas = "sí";
+    let agregarMas = "sÃ­";
     while (agregarMas != "no") {
         if (frutas.length === 0 && lacteos.length === 0 && dulces.length === 0 && congelados.length === 0) {
-            agregarMas = prompt("¿Deseas agregar una comida a la lista de compras? Responde 'sí' o 'no'.");
+            agregarMas = prompt("Â¿Deseas agregar una comida a la lista de compras? Responde 'si' o 'no'.");
         } else {
-            agregarMas = prompt("¿Deseas agregar una comida a la lista de compras? Responde 'sí', 'no' o 'eliminar'.");
+            agregarMas = prompt("Â¿Deseas agregar una comida a la lista de compras? Responde 'si', 'no' o 'eliminar'.");
         }
 
-        while (agregarMas != "sí" && agregarMas != "no" && agregarMas != "eliminar") {
-            alert(`¡Operación no reconocida!`);
-            agregarMas = prompt("¿Deseas agregar una comida a la lista de compras? Responde 'sí' o 'no'.");
+        while (agregarMas != "si" && agregarMas != "no" && agregarMas != "eliminar") {
+            alert(`Â¡Operacion no reconocida!`);
+            agregarMas = prompt("Â¿Deseas agregar una comida a la lista de compras? Responde 'si' o 'no'.");
         }
 
         if (agregarMas === "no") {
             break;
         }
 
-        if (agregarMas === "sí") {
-            comida = prompt("¿Qué comida deseas agregar?");
-            categoria = prompt("¿En qué categoría encaja esta comida: 'frutas', 'lacteos', 'dulces' o 'congelados'?");
+        if (agregarMas === "si") {
+            comida = prompt("Â¿QuÃ© comida deseas agregar?");
+            categoria = prompt("Â¿En quÃ© categorÃ­a encaja esta comida: 'frutas', 'lacteos', 'dulces' o 'congelados'?");
             if (categoria === 'frutas') {
                 frutas.push(comida);
             } else if (categoria === 'lacteos') {
@@ -419,32 +413,32 @@ function iniciarPrograma() {
             } else if (categoria === 'congelados') {
                 congelados.push(comida);
             } else {
-                alert("Esa categoria no está predefinida.")
+                alert("Esa categoria no estÃ¡ predefinida.")
             }
         } else if (agregarMas === "eliminar") {
             if (frutas.length === 0 && lacteos.length === 0 && dulces.length === 0 && congelados.length === 0) {
-                alert(`¡La lista está vacía!`);
+                alert(`Â¡La lista esta vacia!`);
             } else {
-                eliminar = prompt(`Lista de compras:\n  Frutas: ${frutas}\n  Lácteos: ${lacteos}\n  Dulces: ${dulces}\n  Congelados: ${congelados}\n\n¿Qué producto deseas eliminar?`);
+                eliminar = prompt(`Lista de compras:\n  Frutas: ${frutas}\n  LÃ¡cteos: ${lacteos}\n  Dulces: ${dulces}\n  Congelados: ${congelados}\n\nÂ¿Que producto deseas eliminar?`);
                 if (frutas.indexOf(eliminar) != -1) {
                     frutas.splice(frutas.indexOf(eliminar), 1);
-                    alert(`¡El ítem ${eliminar} ha sido eliminado con éxito!`)
+                    alert(`Â¡El item ${eliminar} ha sido eliminado con exito!`)
                 } else if (lacteos.indexOf(eliminar) != -1) {
                     lacteos.splice(lacteos.indexOf(eliminar), 1);
-                    alert(`¡El ítem ${eliminar} ha sido eliminado con éxito!`)
+                    alert(`Â¡El item ${eliminar} ha sido eliminado con exito!`)
                 } else if (dulces.indexOf(eliminar) != -1) {
                     dulces.splice(dulces.indexOf(eliminar), 1);
-                    alert(`¡El ítem ${eliminar} ha sido eliminado con éxito!`)
+                    alert(`Â¡El item ${eliminar} ha sido eliminado con exito!`)
                 } else if (congelados.indexOf(eliminar) != -1) {
                     congelados.splice(congelados.indexOf(eliminar), 1);
-                    alert(`¡El ítem ${eliminar} ha sido eliminado con éxito!`)
+                    alert(`Â¡El item ${eliminar} ha sido eliminado con exito!`)
                 } else {
-                    alert(`¡No fue posible encontrar el ítem dentro de la lista!`)
+                    alert(`Â¡No fue posible encontrar el item dentro de la lista!`)
                 }
             }
         }
     }
-    alert(`Lista de compras:\n  Frutas: ${frutas}\n  Lácteos: ${lacteos}\n  Dulces: ${dulces}\n  Congelados: ${congelados}`);
+    alert(`Lista de compras:\n  Frutas: ${frutas}\n  LÃ¡cteos: ${lacteos}\n  Dulces: ${dulces}\n  Congelados: ${congelados}`);
 }
 /* FIN dia 6 */ 
 
@@ -456,7 +450,7 @@ function operacion(op) {
     operador = op;
     // Restablecer colores de todos los botones
     resetButtonColors();
-    // Cambiar el color del botón seleccionado
+    // Cambiar el color del botÃ³n seleccionado
     document.querySelector(`button[onclick="operacion('${op}')"]`).style.backgroundColor = "green";
 }
 
@@ -473,7 +467,7 @@ function calcular() {
         resultado = num1 * num2;
     } else if (operador === "/") {
         if (num2 === 0) {
-            resultado = "Error: División por cero";
+            resultado = "Error: DivisiÃ³n por cero";
         } else {
             resultado = num1 / num2;
         }
@@ -484,12 +478,12 @@ function calcular() {
 }
 
 function resetButtonColors() {
-    // Obtener todos los botones de operación
+    // Obtener todos los botones de operaciÃ³n
     const botonesOperacion = document.querySelectorAll("button[onclick^='operacion']");
 
-    // Restablecer el color de fondo de cada botón
+    // Restablecer el color de fondo de cada botÃ³n
     botonesOperacion.forEach(button => {
-        button.style.backgroundColor = ""; // O el color original del botón
+        button.style.backgroundColor = ""; // O el color original del botÃ³n
     });
 }
 /* FIN dia 7 */ 
