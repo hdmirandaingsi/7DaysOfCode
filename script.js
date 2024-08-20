@@ -181,9 +181,6 @@ function adivinar() {
 }
 /* FIN dia 4 */
 
-
-
-/* dia 5 */
 let frutas = [];
 let lacteos = [];
 let dulces = [];
@@ -370,76 +367,12 @@ function actualizarListaHTML() {
     document.getElementById("cantidadCongelados").textContent =
         congelados.length;
 }
-/* FIN dia 5 */
 
 
-/* FIN dia 6 */ 
 
-function iniciarPrograma() {
-    let frutas = [];
-    let lacteos = [];
-    let dulces = [];
-    let congelados = [];
-    let comida = "";
-    let categoria = "";
-    let eliminar = "";
 
-    let agregarMas = "sí";
-    while (agregarMas != "no") {
-        if (frutas.length === 0 && lacteos.length === 0 && dulces.length === 0 && congelados.length === 0) {
-            agregarMas = prompt("¿Deseas agregar una comida a la lista de compras? Responde 'si' o 'no'.");
-        } else {
-            agregarMas = prompt("¿Deseas agregar una comida a la lista de compras? Responde 'si', 'no' o 'eliminar'.");
-        }
 
-        while (agregarMas != "si" && agregarMas != "no" && agregarMas != "eliminar") {
-            alert(`¡Operacion no reconocida!`);
-            agregarMas = prompt("¿Deseas agregar una comida a la lista de compras? Responde 'si' o 'no'.");
-        }
-
-        if (agregarMas === "no") {
-            break;
-        }
-
-        if (agregarMas === "si") {
-            comida = prompt("¿Qué comida deseas agregar?");
-            categoria = prompt("¿En qué categoría encaja esta comida: 'frutas', 'lacteos', 'dulces' o 'congelados'?");
-            if (categoria === 'frutas') {
-                frutas.push(comida);
-            } else if (categoria === 'lacteos') {
-                lacteos.push(comida);
-            } else if (categoria === 'dulces') {
-                dulces.push(comida);
-            } else if (categoria === 'congelados') {
-                congelados.push(comida);
-            } else {
-                alert("Esa categoria no está predefinida.")
-            }
-        } else if (agregarMas === "eliminar") {
-            if (frutas.length === 0 && lacteos.length === 0 && dulces.length === 0 && congelados.length === 0) {
-                alert(`¡La lista esta vacia!`);
-            } else {
-                eliminar = prompt(`Lista de compras:\n  Frutas: ${frutas}\n  Lácteos: ${lacteos}\n  Dulces: ${dulces}\n  Congelados: ${congelados}\n\n¿Que producto deseas eliminar?`);
-                if (frutas.indexOf(eliminar) != -1) {
-                    frutas.splice(frutas.indexOf(eliminar), 1);
-                    alert(`¡El item ${eliminar} ha sido eliminado con exito!`)
-                } else if (lacteos.indexOf(eliminar) != -1) {
-                    lacteos.splice(lacteos.indexOf(eliminar), 1);
-                    alert(`¡El item ${eliminar} ha sido eliminado con exito!`)
-                } else if (dulces.indexOf(eliminar) != -1) {
-                    dulces.splice(dulces.indexOf(eliminar), 1);
-                    alert(`¡El item ${eliminar} ha sido eliminado con exito!`)
-                } else if (congelados.indexOf(eliminar) != -1) {
-                    congelados.splice(congelados.indexOf(eliminar), 1);
-                    alert(`¡El item ${eliminar} ha sido eliminado con exito!`)
-                } else {
-                    alert(`¡No fue posible encontrar el item dentro de la lista!`)
-                }
-            }
-        }
-    }
-    alert(`Lista de compras:\n  Frutas: ${frutas}\n  Lácteos: ${lacteos}\n  Dulces: ${dulces}\n  Congelados: ${congelados}`);
-}
+/* FIN dia 6 */  
 /* FIN dia 6 */ 
 
 
