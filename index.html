@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú de Dias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="aside">
+            <a href="#day1" class="day-link">Dia 1</a>
+            <a href="#day2" class="day-link">Dia 2</a>
+            <a href="#day3" class="day-link">Dia 3</a>
+            <a href="#day4" class="day-link">Dia 4</a>
+            <a href="#day5" class="day-link">Dia 5</a>
+            <a href="#day6" class="day-link">Dia 6</a>
+            <a href="#day7" class="day-link">Dia 7</a>
+        </aside>
+
+        <main class="content">
+            <div id="day1" class="day-content1">
+
+                <h2>Dia 1</h2>
+                <p>Contenido para el Dia 1</p>
+                <!--DIA 1-->
+                <h1>Comparaciones en JavaScript con ==</h1>
+
+                <p>
+                    El operador de igualdad flexible (==) en JavaScript puede producir resultados inesperados debido a la coercion de tipos. Aqui hay algunos ejemplos:
+                </p>
+
+                <ul>
+                    <li>
+                        <code>false == '0'</code>:
+                        <strong>Incorrecto.</strong> Aunque `false` y `'0'` son de tipos diferentes, la coercion de tipos los convierte a valores numericos (0) antes de la comparacion, lo que resulta en `true`. Deberia ser `false`.
+                    </li>
+                    <li>
+                        <code>null == undefined</code>:
+                        <strong>Correcto.</strong> En JavaScript, `null` y `undefined` son considerados iguales por el operador de igualdad flexible.
+                    </li>
+                    <li>
+                        <code>" \t\r\n" == 0</code>:
+                        <strong>Incorrecto.</strong> La cadena vacia con caracteres de espacio en blanco se convierte a 0 antes de la comparacion, lo que resulta en `true`. Deberia ser `false`.
+                    </li>
+                    <li>
+                        <code>' ' == 0</code>:
+                        <strong>Incorrecto.</strong> Similar al anterior, la cadena con un espacio en blanco se convierte a 0 antes de la comparacion, lo que resulta en `true`. Deberia ser `false`.
+                    </li>
+                </ul>
+
+                <p>
+                    <strong>Recomendacion:</strong> Para evitar confusiones, es mejor usar el operador de igualdad estricta (===) que compara tanto el valor como el tipo, sin coercion de tipos.
+                </p>
+                <!--FIN DIA 1-->
+
+            </div>
+            <div id="day2" class="day-content2">
+                <h2>Dia 2</h2>
+                <p>Contenido para el Dia 2</p>
+                <!--DIA 2-->
+                <div class="container Introducetusdatos">
+                    <h1>Introduce tus datos</h1>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre"><br><br>
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad"><br><br>
+                    <label for="lenguaje">Lenguaje de programacion:</label>
+                    <input type="text" id="lenguaje"><br><br>
+                    <button onclick="mostrarMensaje()">Mostrar Mensaje</button>
+                    <div id="ventana-mensaje"></div>
+
+                </div>
+                <!--FIN DIA 2-->
+            </div>
+            <div id="day3" class="day-content3">
+                <h2>Dia 3</h2>
+                <p>Contenido para el Dia 3</p>
+                <!--DIA 3-->
+                <div class="container Introducetusdatos">
+
+                    <div id="level1">
+                        <button id="frontend" onclick="selectLevel1('frontend')">Front-End</button>
+                        <button id="backend" onclick="selectLevel1('backend')">Back-End</button>
+                    </div>
+                    <div id="level2" style="display:none;">
+                        <button id="option1" onclick="selectLevel2('option1')"></button>
+                        <button id="option2" onclick="selectLevel2('option2')"></button>
+                    </div>
+                    <div id="message"></div>
+                </div>
+                <!--FIN DIA 3-->
+            </div>
+            <div id="day4" class="day-content4">
+                <h2>Dia 4</h2>
+                <p>Contenido para el Dia 4</p>
+                <!--DIA 4-->
+                <div class="container Introducetusdatos">
+                    <h1>Adivina el número</h1>
+                    <p>Introduce un número del 0 al 10:</p>
+                    <input type="number" id="numeroInput" min="0" max="10">
+                    <button onclick="adivinar()">Adivinar</button>
+                    <p id="mensaje"></p>
+                </div>
+                <!--FIN DIA 4-->
+            </div>
+            <div id="day5" class="day-content5">
+                <h2>Dia 5</h2>
+                <p>Contenido para el Dia 5</p>
+
+                <!--DIA 5-->
+                <div class="container Introducetusdatos">
+                    <h1>Lista de Compras</h1>
+
+                    <div id="lista">
+                        <h2>Frutas: <span id="cantidadFrutas">0</span> - Subtotal: <span id="subtotalFrutas">0</span></h2>
+                        <ul id="frutas"></ul>
+
+                        <h2>Lácteos: <span id="cantidadLacteos">0</span> - Subtotal: <span id="subtotalLacteos">0</span></h2>
+                        <ul id="lacteos"></ul>
+
+                        <h2>Dulces: <span id="cantidadDulces">0</span> - Subtotal: <span id="subtotalDulces">0</span></h2>
+                        <ul id="dulces"></ul>
+
+                        <h2>Congelados: <span id="cantidadCongelados">0</span> - Subtotal: <span id="subtotalCongelados">0</span></h2>
+                        <ul id="congelados"></ul>
+
+                        <h2>Total: <span id="total">0</span></h2>
+                    </div>
+                     
+                </div>
+                <!--FIN DIA 5-->
+
+
+            </div>
+            <div id="day6" class="day-content6">
+                <h2>Dia 6</h2>
+                <p>Contenido para el Dia 6</p>
+                <!--DIA6-->
+                <div class="container Introducetusdatos">
+                    <button onclick="iniciarPrograma()">Iniciar Programa</button>
+                </div>
+                <!--FIN DIA 6-->
+            </div>
+            <div id="day7" class="day-content7">
+                <h2>Dia 7</h2>
+                <p>Contenido para el Dia 7</p>
+                <!--DIA 7-->
+                <div class="container Introducetusdatos">
+                    <h1>Calculadora Simple</h1>
+
+                    <input type="number" id="num1" placeholder="Número 1">
+                    <input type="number" id="num2" placeholder="Número 2">
+
+                    <button onclick="operacion('+')">Sumar</button>
+                    <button onclick="operacion('-')">Restar</button>
+                    <button onclick="operacion('*')">Multiplicar</button>
+                    <button onclick="operacion('/')">Dividir</button>
+                    <button onclick="calcular()">Calcula</button>
+
+                    <label id="resultado">Resultado:</label>
+                </div>
+                <!--FIN DIA 7-->
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

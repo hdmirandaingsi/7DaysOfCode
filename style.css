@@ -1,0 +1,180 @@
+:root {
+    --dark-background: #222;
+    --darker-background: #333;
+    --link-background: #444;
+    --link-hover-background: #555;
+    --light-text: #eee;
+  
+    --node-color: #ccc;
+    --node-selected-color: #ff0;
+    --link-color: #999;
+
+}
+
+body, html ,h1,label,input,botton{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background-color: var(--dark-background); /* Usando la variable para el fondo */
+    color: var(--light-text); /* Usando la variable para el color del texto */
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    }
+
+.aside {
+    width: 200px;
+    background-color: var(--darker-background); /* Usando la variable para el fondo de la barra lateral */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+}
+
+.day-link {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: var(--link-background); /* Usando la variable para el fondo del enlace */
+    text-decoration: none;
+    color: var(--light-text); /* Usando la variable para el color del texto del enlace */
+    border-radius: 5px;
+    transition: background-color 0.1s;
+}
+
+    .day-link:hover {
+        background-color: var(--link-hover-background); /* Usando la variable para el hover del enlace */
+    }
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.day-content {
+    margin-bottom: 50px;
+}
+
+
+/*estilo para dia 1*/
+.Introducetusdatos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--dark-background); /* Usando la variable para el fondo */
+    border: 1px solid var(--light-text); /* Usando la variable para el color del borde */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+    .Introducetusdatos h1,
+    .Introducetusdatos label {
+        color: var(--light-text); /* Usando la variable para el color del texto */
+    }
+
+    .Introducetusdatos input[type="text"],
+    .Introducetusdatos input[type="number"] {
+        padding: 8px;
+        border: 1px solid var(--light-text); /* Usando la variable para el color del borde */
+        border-radius: 4px;
+        box-sizing: border-box;
+        width: 100%;
+        margin-bottom: 10px;
+        background-color: var(--darker-background); /* Usando la variable para el fondo */
+        color: var(--light-text); /* Usando la variable para el color del texto */
+    }
+
+    .Introducetusdatos button {
+        padding: 10px 20px;
+        background-color: var(--link-background); /* Usando la variable para el fondo del botón */
+        color: var(--light-text); /* Usando la variable para el color del texto del botón */
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+        .Introducetusdatos button:hover {
+            background-color: var(--link-hover-background); /* Usando la variable para el hover del botón */
+        }
+
+#ventana-mensaje {
+    display: none;
+    background-color: #378090; /* Color azul del botón (puedes cambiarlo por una variable si lo deseas) */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    padding: 20px 40px; /* Padding similar al de un botón */
+    text-align: center;
+    text-decoration: none; /* Sin subrayado */
+    display: inline-block; /* Para que se comporte como un botón */
+    font-size: 16px; /* Tamaño de fuente similar al de un botón */
+    margin: 4px 2px; /* Margen pequeño */
+    cursor: pointer; /* Cursor de puntero al pasar el mouse */
+    border-radius: 9px; /* Bordes redondeados */
+}
+
+
+
+
+/* Media query para pantallas pequeñas (menos de 768px) */
+@media (max-width: 400px) {
+    .Introducetusdatos {
+        padding: 10px; /* Reduce el padding */
+    }
+
+        .Introducetusdatos input[type="text"],
+        .Introducetusdatos input[type="number"] {
+            width: 100%; /* Los inputs ocupan el 100% del ancho */
+            box-sizing: border-box; /* Para que el padding y el border se incluyan en el ancho */
+        }
+}
+
+
+/* dia 3 */
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: var(--node-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: var(--node-selected-color);
+    }
+
+#message {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* FIN dia 3 */
+
+
+
+
+/* dia 4 */
+
+
+/* FIN dia 4 */
+
+
+/* dia 5 */
+#lista {
+    display: flex;
+    flex-direction: column;
+}
+
+    #lista ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #lista li {
+        margin-bottom: 5px;
+    }
+/* FIN dia 5 */
